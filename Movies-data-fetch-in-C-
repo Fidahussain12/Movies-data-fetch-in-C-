@@ -1,0 +1,34 @@
+using System;
+
+public class Movies
+{
+    private string title;
+    private int releaseYear;
+
+    public Movies(string title, int releaseYear)
+    {
+        this.title = title;
+        this.releaseYear = releaseYear;
+    }
+
+    public string GetTitle()
+    {
+        return title;
+    }
+
+    public int GetReleaseYear()
+    {
+        return releaseYear;
+    }
+
+    public string Display()
+    {
+        return $"Title: {this.GetTitle()}, Release Year: {this.GetReleaseYear()}";
+    }
+
+    public static void Main()
+    {
+        Movies m = new Movies("Inception", 2010);
+        Console.WriteLine(m.Display());
+    }
+}
